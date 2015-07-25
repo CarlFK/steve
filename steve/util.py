@@ -534,3 +534,18 @@ def html_to_markdown(text):
 
     """
     return html2text.html2text(text).strip()
+
+
+def get_video_id(url):
+
+    """Returns the db ID from a full richard site URL
+
+    Example:
+
+    >>> get_video_id("http://pyvideo.org/video/2822/make-api-calls-wicked-fast-with-redis")
+    '2822'
+
+    """
+    v_id = url.split('/video/')[1].split('/')[0]
+    return v_id
+
